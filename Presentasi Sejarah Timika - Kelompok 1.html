@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sejarah Timika dan Penerapan Ilmu Sosial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--y4:#c98a00;--ink:#5f4304;--soft:#8f6f1f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+--gl:linear-gradient(135deg,rgba(255,255,255,.66),rgba(255,255,255,.22));
+--bd:.12rem solid rgba(255,255,255,.8);
+--sh:0 1.2rem 3rem rgba(217,154,0,.25),inset 0 .12rem .25rem rgba(255,255,255,.95),inset 0 -.15rem .5rem rgba(255,206,70,.3);
+--sm:0 .5rem 1.3rem rgba(217,154,0,.2),inset 0 .1rem .2rem rgba(255,255,255,.95);
+--gold:linear-gradient(145deg,rgba(255,228,115,.97),rgba(255,184,0,.9));
+--gs:inset 0 .15rem .3rem rgba(255,255,255,.85),inset 0 -.2rem .5rem rgba(200,120,0,.3),0 .4rem 1rem rgba(232,172,0,.4)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);font-size:min(1vw,1.8vh);height:100%}
+*{box-sizing:border-box;margin:0}
+body{height:100%;overflow:hidden;position:relative;font-family:'Nunito',ui-rounded,'Trebuchet MS',system-ui,sans-serif;font-weight:700;color:var(--ink);background:linear-gradient(150deg,#fffdf2,#fff0b3 55%,#ffe58a)}
+h1,h2,h3,.fr{font-family:'Fredoka',ui-rounded,'Trebuchet MS',system-ui,sans-serif;font-weight:600}
+.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.i.fl{fill:currentColor}
+button{font:inherit;color:inherit}
+button:focus-visible{outline:.3rem solid var(--y4);outline-offset:.3rem}
+.bg{position:absolute;inset:0 -16vw;overflow:hidden;z-index:0;pointer-events:none;transition:transform 1.9s cubic-bezier(.3,.8,.25,1)}
+.blob{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff7c9,#ffd54a 55%,#ffb703);opacity:.9;animation:drift var(--t) ease-in-out infinite alternate}
+.blob.wh{background:radial-gradient(circle at 30% 30%,#fff,#ffeaa0);opacity:.95}
+.spark{position:absolute;width:1.4rem;height:1.4rem;background:#fff;filter:drop-shadow(0 0 .4rem #ffc21a);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:tw var(--t) ease-in-out infinite}
+.burst{position:fixed;left:50%;top:50%;width:10rem;height:10rem;margin:-5rem;border-radius:50%;background:radial-gradient(circle,#fffbe0,#ffd54a);z-index:1;pointer-events:none;opacity:0}
+.scene{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;padding:2.5rem 4rem}
+.hide{display:none}
+.box{will-change:transform}
+.glass{position:relative;overflow:hidden;background:var(--gl);border:var(--bd);border-radius:2.4rem;box-shadow:var(--sh);-webkit-backdrop-filter:blur(1.8rem) saturate(1.7);backdrop-filter:blur(1.8rem) saturate(1.7)}
+.glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.6) 48%,transparent 60%);transform:translateX(-130%);animation:shine 7s ease-in-out infinite;animation-delay:var(--sd,1s)}
+#mem{--sd:2s}#kaj{--sd:3.5s}#tbox{--sd:2.5s}
+.vbox::after{display:none}
+.head{text-align:center;padding:2rem 3.4rem;max-width:80rem}
+h1{font-size:3.2rem;line-height:1.15;text-shadow:0 .1rem 0 rgba(255,255,255,.9),0 .5rem 1.2rem rgba(217,154,0,.3)}
+.sub{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.3rem;padding:.7rem 2.2rem;border-radius:3rem;font-family:'Fredoka',ui-rounded,sans-serif;font-weight:600;font-size:1.7rem;background:var(--gold);border:var(--bd);color:var(--ink);box-shadow:var(--gs)}
+.sub .i{animation:wob 2.5s ease-in-out infinite}
+.mid{display:grid;grid-template-columns:1fr auto 1fr;gap:3rem;align-items:center;width:100%;max-width:100rem}
+.card{padding:1.8rem 2rem;width:100%;max-width:27rem}
+.card h3{display:flex;align-items:center;gap:.7rem;font-size:1.5rem;margin-bottom:1.1rem;color:var(--y4)}
+.m{list-style:none;padding:0;display:grid;gap:.8rem}
+.m li{display:flex;align-items:center;gap:.9rem;padding:.6rem 1rem;border-radius:1.6rem;background:rgba(255,255,255,.55);border:.1rem solid rgba(255,255,255,.85);box-shadow:var(--sm);font-size:1.15rem;transition:transform .35s cubic-bezier(.3,1.6,.5,1),background .3s;animation:liIn .7s calc(1.1s + var(--i)*.12s) cubic-bezier(.2,1.5,.4,1) backwards}
+.m li:hover{transform:translateX(.6rem) scale(1.04);background:rgba(255,255,255,.85)}
+.av{width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#fff;font-size:1.3rem;box-shadow:var(--gs)}
+.av .i,.core .i,.badge .i{filter:drop-shadow(0 .15rem .1rem rgba(150,90,0,.45))}
+.pw{display:flex;flex-direction:column;align-items:center;gap:1.6rem}
+.play{position:relative;width:13rem;height:13rem;border:var(--bd);border-radius:50%;cursor:pointer;background:var(--gl);box-shadow:var(--sh);-webkit-backdrop-filter:blur(1.2rem);backdrop-filter:blur(1.2rem);display:grid;place-items:center;animation:bob 3s ease-in-out infinite}
+.play::before,.play::after{content:"";position:absolute;inset:0;border-radius:50%;border:.3rem solid rgba(255,255,255,.9);box-shadow:0 0 1.2rem rgba(255,194,26,.7);animation:ring 2.4s ease-out infinite}
+.play::after{animation-delay:1.2s}
+.core{width:8.6rem;height:8.6rem;border-radius:50%;display:grid;place-items:center;background:var(--gold);box-shadow:var(--gs);color:#fff;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.core .i{font-size:4rem;margin-left:.5rem}
+.play:hover .core{transform:scale(1.12) rotate(-6deg)}
+.play:active .core{transform:scale(.86)}
+.lab{font-family:'Fredoka',ui-rounded,sans-serif;font-weight:600;font-size:1.5rem;color:var(--y4);letter-spacing:.04em;animation:blink 2s 3s ease-in-out infinite}
+.topbar{position:absolute;top:1.6rem;left:0;right:0;display:flex;justify-content:center;align-items:center}
+.pill{position:absolute;left:3rem;display:flex;align-items:center;gap:.6rem;padding:.7rem 1.4rem;border-radius:3rem;font-size:1.3rem}
+.steps{display:flex;gap:1rem;padding:.7rem 1.4rem;border-radius:3rem}
+.st{width:2.8rem;height:2.8rem;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;color:var(--soft);background:rgba(255,255,255,.6);border:.1rem solid rgba(255,255,255,.9);box-shadow:var(--sm);transition:all .6s cubic-bezier(.3,1.7,.5,1)}
+.st.done{color:var(--y4)}
+.st.on{transform:scale(1.35);color:#fff;background:var(--gold);box-shadow:var(--gs)}
+#slide{padding-top:7.5rem;padding-bottom:7.5rem}
+.row{display:flex;align-items:center;justify-content:center;gap:3.5rem;width:100%}
+.tbox{flex:1;max-width:56rem;padding:2.6rem 3rem}
+.vbox{width:min(62vh,44vw);aspect-ratio:1;padding:1rem;flex:none}
+.vid{position:relative;width:100%;height:100%;border-radius:1.6rem;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.6),rgba(255,229,138,.65));box-shadow:inset 0 .15rem .5rem rgba(255,255,255,.9),0 .2rem .8rem rgba(217,154,0,.25)}
+video{width:100%;height:100%;object-fit:cover;display:block}
+.nov{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;font-family:'Fredoka',ui-rounded,sans-serif;font-weight:600;font-size:1.7rem;padding:2rem;color:var(--y4)}
+.nov.on{display:flex}
+.nov .i{font-size:4.5rem;animation:bob 2.5s ease-in-out infinite}
+.top{display:flex;align-items:center;gap:1.2rem;margin-bottom:1.3rem}
+.badge{width:4.6rem;height:4.6rem;border-radius:50%;display:grid;place-items:center;font-size:2.3rem;color:#fff;background:var(--gold);box-shadow:var(--gs);animation:pop .9s .3s cubic-bezier(.2,1.8,.4,1) backwards}
+.no{font-size:1.25rem;color:var(--soft)}
+h2{font-size:2.6rem;line-height:1.12;text-shadow:0 .1rem 0 rgba(255,255,255,.9)}
+.ln{height:.7rem;width:6rem;border-radius:1rem;margin:1.2rem 0 1.4rem;background:var(--gold);box-shadow:var(--gs);transform-origin:left;animation:grow .8s .5s ease-out backwards}
+.tx{font-size:1.5rem;line-height:1.6;color:#6b4d0b}
+.wd{display:inline-block;white-space:nowrap}
+.ch{display:inline-block;animation:cIn .55s cubic-bezier(.2,1.7,.4,1) backwards}
+.nav{position:absolute;bottom:1.8rem;left:0;right:0;margin-inline:auto;width:max-content;padding:1rem 1.6rem;border-radius:3rem}
+.trk{width:32rem;height:1rem;border-radius:1rem;background:rgba(255,255,255,.7);box-shadow:inset 0 .15rem .4rem rgba(200,140,0,.3);overflow:hidden}
+#bar{height:100%;width:0;border-radius:1rem;background:var(--gold);box-shadow:var(--gs)}
+.rot{position:fixed;inset:0;z-index:50;display:none;flex-direction:column;align-items:center;justify-content:center;gap:1.2em;text-align:center;padding:1.5em;font-size:4.6vw;background:linear-gradient(150deg,rgba(255,253,242,.82),rgba(255,229,138,.82));-webkit-backdrop-filter:blur(1.4em);backdrop-filter:blur(1.4em)}
+.ph{width:3em;height:5em;border-radius:.7em;border:.2em solid #ffc21a;background:rgba(255,255,255,.6);position:relative;animation:turn 2.8s ease-in-out infinite;box-shadow:0 0 1em rgba(255,194,26,.6)}
+.ph::after{content:"";position:absolute;bottom:.3em;left:50%;width:.8em;height:.2em;margin-left:-.4em;border-radius:1em;background:#ffc21a}
+.rot b{font-size:1.15em;font-family:'Fredoka',ui-rounded,sans-serif;font-weight:600}
+.rot small{font-size:.7em;opacity:.8}
+.fsb{display:inline-flex;align-items:center;gap:.5em;padding:.6em 1.4em;border-radius:3em;border:var(--bd);background:var(--gold);box-shadow:var(--gs);font-size:.8em;cursor:pointer;font-family:'Fredoka',ui-rounded,sans-serif;font-weight:600}
+@media (orientation:portrait) and (pointer:coarse){.rot{display:flex}}
+.vid>*{animation:vIn 1.2s .35s cubic-bezier(.2,.9,.3,1) backwards}
+.bye .top{animation:rise .55s ease-in forwards}
+.bye h2{animation:rise .55s .06s ease-in forwards}
+.bye .ln{animation:rise .55s .1s ease-in forwards}
+.bye .tx{animation:rise .6s .14s ease-in forwards}
+.vbox.bye .vid{animation:vOut .7s ease-in forwards}
+.fin{padding:2.4rem 4.5rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1.1rem}
+.heart{width:6.4rem;height:6.4rem;font-size:3.2rem;border-radius:50%;display:grid;place-items:center;color:#fff;background:var(--gold);box-shadow:var(--gs);animation:pop 1s .5s cubic-bezier(.2,1.8,.4,1) backwards,beat 1.6s 2s ease-in-out infinite}
+.heart .i{filter:drop-shadow(0 .15rem .1rem rgba(150,90,0,.45))}
+.big{font-size:6rem;line-height:1.05;color:var(--y4);text-shadow:0 .15rem 0 #fff,0 .6rem 1.4rem rgba(217,154,0,.35)}
+.fin p{font-size:1.7rem;color:#6b4d0b}
+.crew{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;padding:1.2rem 1.6rem;max-width:84rem}
+.crew span{display:flex;align-items:center;gap:.6rem;padding:.5rem 1.1rem;border-radius:2rem;background:rgba(255,255,255,.6);border:.1rem solid rgba(255,255,255,.9);box-shadow:var(--sm);font-size:1.15rem;animation:cIn .6s calc(1.6s + var(--i)*.1s) cubic-bezier(.2,1.7,.4,1) backwards}
+.back{display:inline-flex;align-items:center;gap:.8rem;padding:1rem 2.6rem;border-radius:3rem;border:var(--bd);cursor:pointer;background:var(--gold);box-shadow:var(--gs);color:var(--ink);font-family:'Fredoka',ui-rounded,sans-serif;font-weight:600;font-size:1.6rem;transition:transform .3s cubic-bezier(.3,1.6,.5,1);animation:glow 2.2s 4s ease-in-out infinite}
+.back .i{font-size:1.8rem;transition:transform .6s cubic-bezier(.3,1.5,.5,1)}
+.back:hover{transform:scale(1.08) translateY(-.2rem)}
+.back:hover .i{transform:scale(1.2) rotate(-12deg)}
+.back:active{transform:scale(.92)}
+#conf{position:fixed;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+.cf{position:absolute;left:50%;top:42%;border-radius:50%;box-shadow:inset 0 .1rem .2rem rgba(255,255,255,.9),0 .2rem .5rem rgba(217,154,0,.3)}
+.cf.rc{border-radius:.3rem}
+.cf.sp{border-radius:0;box-shadow:none;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+@keyframes vIn{from{transform:scale(1.3);opacity:0}}
+@keyframes vOut{to{transform:scale(1.15);opacity:0}}
+@keyframes rise{to{opacity:0;transform:translateY(-1.6rem) scale(.96)}}
+@keyframes beat{50%{transform:scale(1.14)}}
+@keyframes glow{50%{box-shadow:var(--gs),0 0 2.2rem rgba(255,194,26,.95)}}
+@keyframes shine{0%,55%{transform:translateX(-130%)}100%{transform:translateX(130%)}}
+@keyframes drift{to{transform:translate(var(--dx),var(--dy)) scale(var(--s)) rotate(var(--r))}}
+@keyframes tw{50%{transform:scale(1.8) rotate(90deg);opacity:.4}}
+@keyframes bob{50%{transform:translateY(-.9rem)}}
+@keyframes wob{50%{transform:rotate(14deg) scale(1.2)}}
+@keyframes ring{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+@keyframes blink{50%{opacity:.5;transform:scale(.96)}}
+@keyframes cIn{from{opacity:0;transform:translateY(.7em) scale(.4) rotate(10deg)}}
+@keyframes liIn{from{opacity:0;transform:translateX(-3rem) scale(.8)}}
+@keyframes pop{from{transform:scale(0) rotate(-120deg)}}
+@keyframes grow{from{transform:scaleX(0)}}
+@keyframes turn{0%,20%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+@media (max-height:520px){
+ html{font-size:min(1.1vw,1.95vh)}
+ .scene{padding:1.4rem 3rem;gap:1.3rem}
+ #slide{padding:6.5rem 3rem 6rem}
+ .tx{font-size:1.7rem}
+ .head{padding:1.4rem 2.4rem}
+ .card{padding:1.3rem 1.6rem}
+ .m{gap:.55rem}
+ .play{width:11rem;height:11rem}.core{width:7.2rem;height:7.2rem}
+ .big{font-size:4.2rem}.heart{width:4.6rem;height:4.6rem;font-size:2.3rem}.fin{padding:1.5rem 3rem;gap:.7rem}.fin p{font-size:1.4rem}.crew{padding:.8rem 1.2rem}.back{padding:.7rem 2rem;font-size:1.4rem}
+}
+@media (prefers-reduced-motion:reduce){.blob,.spark,.play,.play::before,.play::after,.nov .i,.lab,.sub .i,.glass::after{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+<symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7"/><path d="M12 2 20 7H4z"/></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3 20 12 6 21z"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+<symbol id="i-vid" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+<symbol id="i-max" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+</defs></svg>
+
+<div class="bg" id="bg"></div>
+<div class="burst" id="burst"></div>
+
+<main class="scene" id="intro">
+ <div class="box glass head" id="hd">
+  <h1 id="ttl" aria-label="Sejarah Timika dan Penerapan Ilmu Sosial Dalam Kajian Sejarah"></h1>
+  <div class="sub"><svg class="i"><use href="#i-users"/></svg><span id="kel"></span></div>
+ </div>
+ <div class="mid">
+  <div class="box glass card" id="mem" style="justify-self:end">
+   <h3><svg class="i"><use href="#i-users"/></svg>Anggota</h3>
+   <ul class="m" id="ml"></ul>
+  </div>
+  <div class="box pw" id="pw">
+   <button class="play" id="play" aria-label="Mulai presentasi"><span class="core"><svg class="i fl"><use href="#i-play"/></svg></span></button>
+   <div class="lab" id="lab"></div>
+  </div>
+  <div class="box glass card" id="kaj" style="justify-self:start">
+   <h3><svg class="i"><use href="#i-book"/></svg>Kajian Ilmu Sosial</h3>
+   <ul class="m" id="kl"></ul>
+  </div>
+ </div>
+</main>
+
+<section class="scene hide" id="slide">
+ <div class="topbar" id="topbar"><div class="pill glass fr"><svg class="i"><use href="#i-users"/></svg>Kelompok 1</div><div class="steps glass" id="steps"></div></div>
+ <div class="row">
+  <div class="box glass tbox" id="tbox"></div>
+  <div class="box glass vbox" id="vbox"><div class="vid" id="vid"></div></div>
+ </div>
+ <div class="nav glass" id="nav"><div class="trk"><div id="bar"></div></div></div>
+</section>
+
+<section class="scene hide" id="end">
+ <div class="box glass fin" id="fin">
+  <div class="heart"><svg class="i fl"><use href="#i-heart"/></svg></div>
+  <h2 class="big" id="tk"></h2>
+  <p id="tk2"></p>
+  <div class="sub"><svg class="i"><use href="#i-users"/></svg><span id="tk3"></span></div>
+ </div>
+ <div class="box glass crew" id="crew"></div>
+ <div class="box" id="bk"><button class="back" id="back"><svg class="i"><use href="#i-home"/></svg>Kembali ke Awal</button></div>
+</section>
+<div id="conf"></div>
+
+<div class="rot" id="rot">
+ <div class="ph"></div>
+ <b>Putar layar ke mode landscape</b>
+ <small>Presentasi ini hanya tampil di mode miring</small>
+ <button class="fsb" id="fsb"><svg class="i"><use href="#i-max"/></svg>Layar penuh</button>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const EI='cubic-bezier(.6,-.3,.7,.05)',EO='cubic-bezier(.18,.9,.3,1.25)';
+const D={t:[0,-120,-6],l:[-120,0,-8],r:[120,0,8],b:[0,120,12]};
+const S=[
+{t:'Pembukaan & Sejarah',i:'book',x:'Halo, kami dari kelompok 1. Hari ini kami akan membahas sejarah Timika dan kaitannya dengan ilmu-ilmu sosial. Timika merupakan salah satu wilayah di Papua Tengah yang mengalami perkembangan dari wilayah yang awalnya tidak terlalu ramai menjadi daerah perkotaan yang berkembang. Perkembangan Timika juga berkaitan erat dengan kegiatan pertambangan dan perpindahan penduduk.'},
+{t:'Sosiologi',i:'users',x:'Dari ilmu sosiologi, perkembangan Timika dapat dilihat dari perubahan kehidupan masyarakat dan hubungan antar kelompok. Banyak masyarakat dari berbagai daerah datang ke Timika, sehingga terjadi interaksi dan keberagaman masyarakat.'},
+{t:'Ekonomi',i:'chart',x:'Dari ilmu ekonomi, perkembangan Timika sangat berkaitan dengan kegiatan pertambangan. Pertambangan menjadi salah satu kegiatan ekonomi penting yang memengaruhi pekerjaan, perdagangan, pembangunan, dan kehidupan masyarakat di Timika.'},
+{t:'Antropologi & Politik',i:'globe',x:'Dari ilmu antropologi, kita dapat melihat keberadaan masyarakat asli Papua serta budaya dan tradisi yang berkembang di Timika. Sedangkan dari ilmu politik, perkembangan Timika berkaitan dengan pemerintahan, kebijakan, dan pembangunan daerah.'},
+{t:'Kesimpulan & Penutup',i:'check',x:'Kesimpulannya, sejarah Timika tidak hanya dapat dipelajari dari peristiwa masa lalu, tetapi juga melalui ilmu sosial seperti sosiologi, ekonomi, antropologi, dan politik. Dengan menggunakan ilmu-ilmu tersebut, kita dapat memahami bagaimana Timika berkembang dan bagaimana perubahan tersebut memengaruhi masyarakat. Terima kasih.'}];
+const M=['Adilah Afifah','Ayatul Husna','Austin Gabriel Hutabarat','Zaskiya Aqillah Anggriani','Achmad Daniswara Javas Muchie'];
+const K=[['users','Sosiologi'],['chart','Ekonomi'],['globe','Antropologi'],['landmark','Politik']];
+const ic=n=>`<svg class="i"><use href="#i-${n}"/></svg>`;
+/* teks per karakter: tiap kata dibungkus agar tidak terpotong, tiap huruf punya delay sendiri */
+const C=(t,d,s)=>{let k=0;return t.split(' ').map(w=>`<span class="wd">${[...w].map(c=>`<span class="ch" style="animation-delay:${(d+k++*s).toFixed(3)}s">${c=='&'?'&amp;':c}</span>`).join('')}</span>`).join(' ')};
+
+function fly(el,d,out,delay=0,dur=out?1000:1300){
+ el.getAnimations().forEach(a=>a.cancel());
+ const sx=Math.sign(d[0]),sy=Math.sign(d[1]),T=(x,y,r,s)=>`translate3d(${x}vw,${y}vh,0) rotate(${r}deg) scale(${s})`;
+ const on=T(0,0,0,1),off=T(d[0]*.9,d[1]*.9,d[2]*.6,.9);
+ /* keluar: menarik mundur sedikit (antisipasi) lalu melesat; masuk: melaju, sedikit melewati titik, lalu mengendap */
+ const kf=out?[
+  {transform:on,opacity:1,easing:'cubic-bezier(.3,.7,.4,1)'},
+  {transform:T(-sx*2.5,-sy*2.5,-d[2]*.15,1.04),opacity:1,offset:.2,easing:'cubic-bezier(.6,0,.9,.45)'},
+  {transform:off,opacity:0}
+ ]:[
+  {transform:off,opacity:0,easing:'cubic-bezier(.15,.85,.3,1)'},
+  {transform:T(-sx*1.2,-sy*1.5,0,1.025),opacity:1,offset:.62,easing:'cubic-bezier(.4,0,.2,1)'},
+  {transform:on,opacity:1}
+ ];
+ const a=el.animate(kf,{duration:dur,delay,fill:out?'forwards':'both'});
+ if(!out)a.finished.then(()=>a.cancel()).catch(()=>{});
+ return a.finished.catch(()=>{});
+}
+
+/* latar: blob kuning/putih dan kilau di belakang kaca */
+(()=>{const bg=$('#bg'),r=(a,b)=>a+Math.random()*(b-a);
+ for(let i=0;i<10;i++){const e=document.createElement('div'),s=r(8,22);e.className='blob'+(i%3==2?' wh':'');
+  e.style.cssText=`width:${s}rem;height:${s}rem;left:${r(-6,92)}%;top:${r(-10,86)}%;--t:${r(7,13)}s;--dx:${r(-8,8)}rem;--dy:${r(-8,8)}rem;--r:${r(-60,60)}deg;--s:${r(.8,1.25)}`;bg.appendChild(e)}
+ for(let i=0;i<18;i++){const e=document.createElement('div');e.className='spark';
+  e.style.cssText=`left:${r(2,97)}%;top:${r(2,95)}%;--t:${r(2,5)}s;animation-delay:${r(0,3)}s`;bg.appendChild(e)}
+})();
+$('#steps').innerHTML=S.map(s=>`<div class="st">${ic(s.i)}</div>`).join('');
+
+let idx=0,leaving=0,mode='v',el=0,busy=0;
+const pm=matchMedia('(orientation:portrait) and (pointer:coarse)');
+
+async function fs(){try{const d=document.documentElement;if(!document.fullscreenElement&&d.requestFullscreen)await d.requestFullscreen();if(screen.orientation&&screen.orientation.lock)await screen.orientation.lock('landscape')}catch(e){}}
+$('#fsb').onclick=fs;
+
+function introIn(){
+ $('#intro').classList.remove('hide');par(0);
+ $('#ttl').innerHTML=C('Sejarah Timika dan Penerapan Ilmu Sosial Dalam Kajian Sejarah',.5,.03);
+ $('#kel').innerHTML=C('Kelompok 1',1.5,.05);
+ $('#lab').innerHTML=C('Mulai Presentasi',1.8,.04);
+ $('#ml').innerHTML=M.map((n,i)=>`<li style="--i:${i}"><span class="av">${ic('user')}</span><span>${C(n,1.3+i*.12,.03)}</span></li>`).join('');
+ $('#kl').innerHTML=K.map((k,i)=>`<li style="--i:${i}"><span class="av">${ic(k[0])}</span><span>${C(k[1],1.5+i*.12,.04)}</span></li>`).join('');
+ fly($('#hd'),D.t,0,0);fly($('#mem'),D.l,0,250);fly($('#pw'),D.b,0,450);fly($('#kaj'),D.r,0,650);
+}
+
+function burst(){
+ $('#burst').animate([{transform:'scale(0)',opacity:.95},{transform:'scale(34)',opacity:0}],{duration:1500,easing:'cubic-bezier(.2,.7,.3,1)'});
+}
+
+$('#play').onclick=async()=>{
+ if(busy)return;busy=1;burst();
+ if(matchMedia('(pointer:coarse)').matches)fs();
+ await Promise.all([fly($('#pw'),D.b,1,0),fly($('#mem'),D.l,1,130),fly($('#kaj'),D.r,1,260),fly($('#hd'),D.t,1,390)]);
+ $('#intro').classList.add('hide');
+ go(0);
+};
+
+async function go(i){
+ if(i>=S.length){showEnd();return}
+ const first=$('#slide').classList.contains('hide');
+ leaving=1;idx=i;const s=S[i];par(i+1);$('#tbox').classList.remove('bye');$('#vbox').classList.remove('bye');
+ $('#slide').classList.remove('hide');
+ $('#tbox').innerHTML=`<div class="top"><div class="badge">${ic(s.i)}</div><div class="no fr">Slide ${i+1} dari ${S.length}</div></div><h2>${C(s.t,.4,.045)}</h2><div class="ln"></div><p class="tx">${C(s.x,.9,Math.min(.02,2.4/s.x.length))}</p>`;
+ $('#vid').innerHTML=`<video id="v" playsinline preload="auto"></video><div class="nov" id="nov">${ic('vid')}<span>Video Nanti di masukin</span></div>`;
+ const v=$('#v');mode='v';el=0;
+ v.onerror=()=>{mode='n';el=0;v.style.display='none';$('#nov').classList.add('on')};
+ v.onended=()=>{if(!leaving)leave()};
+ v.src=`video${i+1}.mp4`;
+ $('#bar').style.width='0';
+ $('#steps').querySelectorAll('.st').forEach((e,k)=>{e.classList.toggle('on',k==i);e.classList.toggle('done',k<i)});
+ if(first){fly($('#topbar'),D.t,0,0);fly($('#nav'),D.b,0,400)}
+ fly($('#tbox'),D.l,0,0);
+ await fly($('#vbox'),D.r,0,200);
+ leaving=0;
+ if(mode=='v'&&!pm.matches)v.play().catch(()=>{v.muted=true;v.play().catch(()=>{})});
+}
+
+/* keluar: kotak video lebih dulu, disusul kotak teks, lalu slide berikutnya */
+async function leave(){
+ if(leaving)return;leaving=1;
+ $('#vbox').classList.add('bye');$('#tbox').classList.add('bye');
+ if(idx==S.length-1){fly($('#topbar'),D.t,1,300);fly($('#nav'),D.b,1,300)}
+ await Promise.all([fly($('#vbox'),D.r,1,0),fly($('#tbox'),D.l,1,180)]);
+ const v=$('#v');if(v)v.pause();
+ go(idx+1);
+}
+
+setInterval(()=>{
+ if(leaving||pm.matches||$('#slide').classList.contains('hide'))return;
+ const v=$('#v');let p,end;
+ if(mode=='v'){if(!v||!isFinite(v.duration)||!v.duration)return;p=v.currentTime/v.duration;end=v.duration-v.currentTime<=1}
+ else{el+=.1;p=el/3;end=el>=3}
+ $('#bar').style.width=Math.min(100,p*100)+'%';
+ if(end)leave();
+},100);
+
+pm.onchange=()=>{
+ const v=$('#v');
+ if(!v||mode!='v'||leaving||$('#slide').classList.contains('hide'))return;
+ pm.matches?v.pause():v.play().catch(()=>{});
+};
+
+function par(n){$('#bg').style.transform=`translateX(${(3-n)*3.5}vw)`}
+
+function confetti(){
+ const c=$('#conf'),cols=['#ffd54a','#ffe58a','#fff','#ffb703','#fff3b0'],r=(a,b)=>a+Math.random()*(b-a);
+ for(let i=0;i<48;i++){
+  const e=document.createElement('i'),k=i%3,z=r(.7,1.6),dx=r(-48,48),dy=r(-44,-8),rot=r(-360,360);
+  e.className='cf'+(k==1?' sp':k==2?' rc':'');
+  e.style.cssText=`background:${cols[i%5]};width:${z}rem;height:${z}rem`;
+  c.appendChild(e);
+  e.animate([
+   {transform:'translate(0,0) scale(0) rotate(0deg)',opacity:1,easing:'cubic-bezier(.15,.8,.35,1)'},
+   {transform:`translate(${dx}vw,${dy}vh) scale(1) rotate(${rot/2}deg)`,opacity:1,offset:.4,easing:'cubic-bezier(.45,0,.85,.55)'},
+   {transform:`translate(${dx*1.15}vw,62vh) scale(.9) rotate(${rot}deg)`,opacity:0}
+  ],{duration:r(2600,4200),delay:r(0,500),fill:'both'}).finished.then(()=>e.remove()).catch(()=>{});
+ }
+}
+
+function showEnd(){
+ par(6);
+ $('#slide').classList.add('hide');
+ $('#end').classList.remove('hide');
+ $('#tk').innerHTML=C('Terima Kasih',.7,.07);
+ $('#tk2').innerHTML=C('Semoga presentasi tentang sejarah Timika ini bermanfaat',1.7,.022);
+ $('#tk3').innerHTML=C('Kelompok 1',2.6,.05);
+ $('#crew').innerHTML=M.map((n,i)=>`<span style="--i:${i}">${ic('user')}${n}</span>`).join('');
+ fly($('#fin'),D.t,0,0);fly($('#crew'),D.b,0,250);fly($('#bk'),D.b,0,450);
+ setTimeout(confetti,700);setTimeout(confetti,3200);
+}
+
+let bk=0;
+$('#back').onclick=async()=>{
+ if(bk)return;bk=1;burst();
+ await Promise.all([fly($('#bk'),D.b,1,0),fly($('#crew'),D.b,1,120),fly($('#fin'),D.t,1,240)]);
+ $('#end').classList.add('hide');bk=0;busy=0;introIn();
+};
+
+introIn();
+</script>
+</body>
+</html>
